@@ -97,7 +97,7 @@ create table jobs(
      job_link varchar(255),
      location varchar(100),
      work_type enum('Remote', 'Hybrid','On-site', 'Flexible') default 'Flexible',
-     application_status ENUM ('Applied', 'Under Review', 'Interview', 'Offer', 'Accepted', 'Rejected','Withdrawn') default 'Applied',
+     application_status ENUM ('Applied', 'Under Review', 'Interview', 'Offer', 'Accepted', 'Rejected', 'Withdrawn') default 'Applied',
      date_applied date not null,
      follow_up_date date default null,
      notes text,
@@ -112,7 +112,7 @@ create table jobs(
      id int auto_increment primary key,
      application_id int not null,
     changed_by int null,
-     stage_name enum('Applied', 'Under Review', 'Interview','Offer', 'Accepted', 'Rejected', Withdrawn') not null,
+     stage_name enum('Applied', 'Under Review', 'Interview','Offer', 'Accepted', 'Rejected',' Withdrawn') not null,
      moved_at timestamp default current_timestamp,
      foreign key(application_id) references application (application_id) on delete cascade
      );
