@@ -67,34 +67,17 @@ create table jobs(
     );
 
 // Application Table
- create table applications(
-     application_id int auto_increment primary key,
-     candidate_id int not null,
-     job_id int not null,
-     company_name varchar(100),
-     position_title varchar(100) not null,
-     job_link varchar(255),
-     location varchar(100),
-     work_type enum('Remote', 'Hybrid','On-site', 'Flexible') default 'Flexible',
-     application_status ENUM ('Applied', 'Under Review', 'Interview', 'Offer', 'Accepted', 'Rejected', 'Withdrawn') default 'Applied',
-     date_applied date not null,
-     follow_up_date date default null,
-     notes text,
-     created_at timestamp default current_timestamp,
-     updated_at timestamp defauld current_timestamp on update current_timestamp,
-     foreign key(candidate_id) references candidates(candidate_id) on delete cascade,
-     foreign key(job_id) references jobs(job_id) on delete set null
-     );
+  CREATE TABLE applications (
+   application_id INT AUTO_INCREMENT PRIMARY KEY,
+   candidate_id INT NOT NULL,
+   job_id INT NOT NULL,
+   applied_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    
+   FOREIGN KEY (candidate_id) REFERENCES candidates(candidate_id),
+   FOREIGN KEY (job_id) REFERENCES jobs(job_id)
+ );
 
-// Candidate Pipeline
- create table candidate_pipeline(
-     id int auto_increment primary key,
-     application_id int not null,
-    changed_by int null,
-     stage_name enum('Applied', 'Under Review', 'Interview','Offer', 'Accepted', 'Rejected',' Withdrawn') not null,
-     moved_at timestamp default current_timestamp,
-     foreign key(application_id) references application (application_id) on delete cascade
-     );
 
     
 //Saved Jobs
@@ -124,16 +107,6 @@ CREATE TABLE pipeline_stages (
     stage_name VARCHAR(100),
     order_index INT DEFAULT 0,
     FOREIGN KEY (recruiter_id) REFERENCES recruiters(recruiter_id)
-);
-
-//Pipeline applications
-CREATE TABLE pipeline_applications (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    application_id INT NOT NULL,
-    stage_id INT NOT NULL,
-    moved_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (application_id) REFERENCES applications(application_id),
-    FOREIGN KEY (stage_id) REFERENCES pipeline_stages(stage_id)
 );
 
 //Messages
