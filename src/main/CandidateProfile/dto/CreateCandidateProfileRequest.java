@@ -1,4 +1,4 @@
-package com.example.CandidateProfile.dto;
+package com.example.demo.CandidateProfile.dto;
 
 
 public class CreateCandidateProfileRequest {
