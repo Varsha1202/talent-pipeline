@@ -26,7 +26,7 @@ Backend services are implemented separately; integration is in progress.
 
 ## UI Preview
 
-![Landing Page](./landing.png)
+![Landing Page](./landing.png.png)
 
 ## Development Setup
 
