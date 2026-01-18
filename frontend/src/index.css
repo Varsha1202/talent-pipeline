@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  width: 100dvw;
+  overflow-x: hidden;
+  background-color:  #f2f1f7f9;
+  font-family: "General Sans", sans-serif;
+}
+
+
+@layer base {
+  /* SORA Family */
+  @font-face {
+    font-family: "Sora-Bold";
+    src: url("/talent01/public/Fonts/Sora-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Sora-ExtraBold";
+    src: url("/talent01/public/Fonts/Sora-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Sora-ExtraLight";
+    src: url("/talent01/public/Fonts/Sora-ExtraLight.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Sora-Light";
+    src: url("/talent01/public/Fonts/Sora-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Sora-Medium";
+    src: url("/talent01/public/Fonts/Sora-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Sora-Regular";
+    src: url("/talent01/public/Fonts/Sora-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Sora-SemiBold";
+    src: url("/talent01/public/Fonts/Sora-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Sora-Thin";
+    src: url("/talent01/public/Fonts/Sora-Thin.woff2") format("woff2");
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Sora-Variable";
+    src: url("/talent01/public/Fonts/Sora-VariableFont_wght.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+  }
+
+  /* SPACE GROTESK Family */
+  @font-face {
+    font-family: "SpaceGrotesk-Bold";
+    src: url("/talent01/public/Fonts/SpaceGrotesk-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "SpaceGrotesk-Light";
+    src: url("/talent01/public/Fonts/SpaceGrotesk-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "SpaceGrotesk-Medium";
+    src: url("/talent01/public/Fonts/SpaceGrotesk-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "SpaceGrotesk-Regular";
+    src: url("/talent01/public/Fonts/SpaceGrotesk-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
+
